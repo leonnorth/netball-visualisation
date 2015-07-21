@@ -29,8 +29,13 @@
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
 	      <a class="navbar-brand" href="../index.html">Leon North Home</a>
-	      <a class="navbar-brand" href="../index.html">Source On GitHub</a>
 	    </div>
+
+	    <div class="collapse navbar-collapse " id="navbar-collapse-main">
+	      <ul class="nav navbar-nav navbar-right ">
+	        <li><a href="https://github.com/leonnorth/netball-visualisation">Source On GitHub</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
 	
@@ -112,51 +117,13 @@
 		</div>
 	</div>
 
-
-	<script>
-
-		// //build the year tabs along the top
-		// console.log("num years used: "+numYears);
-		// for(var i = startYear; i < startYear + numYears; i++){
-		// 	// console.log("in loop to build "+i+" tab");
-		// 	var yearTabssss = d3.select("#yearTabs")
-		// 		.append("li")
-		// 		.append("a")
-		// 		.attr("data-toggle", "pill")
-		// 		.attr("href", i).text(i);
-		// }
-
-		// //tabs listener
-		// $(document).ready(function(){
-		//     $(".nav-tabs a").click(function(){
-		//         $(this).tab('show');
-		//     });
-		//     $('.nav-pills a').on('shown.bs.tab', function(event){
-	 //        selection = $(event.target).text();     // active pill
-	 //        reDrawVisualisations();
-		//     });
-		//     $('.nav-tabs a').on('shown.bs.tab', function(event){
-	 //        year = $(event.target).text();          // active tab
-	 //        reDrawVisualisations();
-		//     });
-		// });
-
-		// //listner for the pictures along the top
-		// function topButton(name){
-		// 	if (name !== 'home'){
-		// 		team = name;
-		// 		//shows and changes the tab to teams
-		// 		$('#selectionTabs a[href="#teams"]').tab('show');
-		// 		reDrawVisualisations();
-		// 	}
-		// 	else{
-		// 		//shows and changes the tab to ALL YEARS, Standings
-		// 		$('#selectionTabs a:first').tab('show');
-		// 		$('#yearTabs a:first').tab('show');
-		// 	}
-		// }
-	</script>
-
+	<div class="container">
+	    <div class="container text-right pad-section">
+	    	<h4>
+            	Created by Leon North and Kalo Pilato
+		    </h4>    
+	    </div>
+  	</div>
 
 </body>
 </html>
