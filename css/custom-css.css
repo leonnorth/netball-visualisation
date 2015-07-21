@@ -1,0 +1,82 @@
+
+
+.vertical-align {
+display: flex;
+align-items: center;
+}
+
+/*Removes extra space in the margins of each element*/
+.no-gutter > [class*='col-'] {
+padding-right:0;
+padding-left:0;
+}
+
+/*I'm using bootstrap which uses a grid system that divides by 12.
+This overrides this to divide by 5. 
+I needed this for the pictures along the top (5 per country)*/
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+position: relative;
+min-height: 1px;
+padding-right: 10px;
+padding-left: 10px;
+}
+.col-xs-15 {
+width: 20%;
+float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+    width: 20%;
+    float: left;
+}
+}
+@media (min-width: 992px) {
+.col-md-15 {
+    width: 20%;
+    float: left;
+}
+}
+@media (min-width: 1200px) {
+.col-lg-15 {
+    width: 20%;
+    float: left;
+}
+
+/*The main scrollable content panel for our visualisations*/
+}
+.content {
+    height: 620px;
+    width: 820px;
+} 
+
+/*For the hover functions on the home and country image buttons*/
+.hoverable {
+    transition: all 0.0s linear;
+}
+.hoverable:hover {
+    opacity: 0.4;         
+}
+
+/*axis styling*/
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  shape-rendering: crispEdges;
+  opacity: 1;
+}
+
+.navbar-default {
+  background-color: #f2e394;
+  border: none;
+}
+.navbar-default .navbar-brand {
+  color: #588c7e;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #588c7e;
+}

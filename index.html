@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ANZ Championship Visualisations</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="http://d3js.org/queue.v1.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <script src="javascript/processor.js"></script>
+  <script src="javascript/parser.js"></script>
+  <script src="javascript/standings.js"></script>
+  <script src="javascript/teams.js"></script>
+  <script src="javascript/country.js"></script>
+  <script src="javascript/rivalries.js"></script>
+  <script src="javascript/stadiums.js"></script>
+  <script src="javascript/visualisations.js"></script>
+  <script src="javascript/util.js"></script>
+  <link href="css/custom-css.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- navigation panel -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="../index.html">Leon North Home</a>
+	      <a class="navbar-brand" href="../index.html">Source On GitHub</a>
+	    </div>
+	  </div><!-- /.container-fluid -->
+	</nav>
+	
+	
+		<!--pictures along the top-->
+	<div class="container">
+	<div class="row vertical-align">
+		<div class="col-xs-2">
+			<img class="img-responsive hoverable" src="resources/anz_champ_logo.png" onclick="topButton('home')" style="cursor:pointer;">
+		</div>
+		<div class="col-xs-10 no-gutter">
+		<div class="col-xs-5 no-gutter" style="border: 2px solid green">
+		<div class="col-xs-15">
+			<img class="img-responsive hoverable" src="resources/team_logos/Queensland Firebirds.png" onclick="topButton('Queensland Firebirds')" style="cursor:pointer;">
+		</div>
+		<div class="col-xs-15">
+			<img class="img-responsive hoverable" src="resources/team_logos/Melbourne Vixens.png" onclick="topButton('Melbourne Vixens')" style="cursor:pointer;">
+		</div>
+		<div class="col-xs-15">
+			<img class="img-responsive hoverable" src="resources/team_logos/New South Wales Swifts.png" onclick="topButton('New South Wales Swifts')" style="cursor:pointer;">
+		</div>
+		<div class="col-xs-15">
+			<img class="img-responsive hoverable" src="resources/team_logos/West Coast Fever.png" onclick="topButton('West Coast Fever')" style="cursor:pointer;">
+		</div>
+		<div class="col-xs-15">
+				<img class="img-responsive hoverable" src="resources/team_logos/Adelaide Thunderbirds.png" onclick="topButton('Adelaide Thunderbirds')" style="cursor:pointer;">
+		</div>
+		</div>
+		<div class="col-xs-5 no-gutter col-xs-offset-1" style="border: 2px solid black">
+		<div class="col-xs-15">
+			<img class="img-responsive hoverable" src="resources/team_logos/Northern Mystics.png" onclick="topButton('Northern Mystics')" style="cursor:pointer;">
+		</div>
+		<div class="col-xs-15">
+			<img class="img-responsive hoverable" src="resources/team_logos/Canterbury Tactix.png" onclick="topButton('Canterbury Tactix')" style="cursor:pointer;">
+		</div>
+		<div class="col-xs-15">
+			<img class="img-responsive hoverable" src="resources/team_logos/Central Pulse.png" onclick="topButton('Central Pulse')" style="cursor:pointer;">
+		</div>
+		<div class="col-xs-15">
+			<img class="img-responsive hoverable" src="resources/team_logos/Waikato Bay of Plenty Magic.png" onclick="topButton('Waikato Bay of Plenty Magic')" style="cursor:pointer;">
+		</div>
+		<div class="col-xs-15">
+			<img class="img-responsive hoverable" src="resources/team_logos/Southern Steel.png" onclick="topButton('Southern Steel')" style="cursor:pointer;">
+		</div>
+		</div>
+		<div class="col-xs-1">
+		</div>
+		</div>
+	</div>
+	</div>
+
+	<!--horizontal tabs-->
+	<div class="container">
+	    <div class="col-xs-10 col-xs-offset-2">
+	    	<ul class="nav nav-tabs" id="yearTabs">
+			    <li class="active"><a data-toggle="pill" href="#ALL">ALL YEARS</a></li>
+
+		  	</ul>
+	  	</div>
+	</div>
+
+	<!--vertical tabs and CONTENT PANE-->
+	<div class="container">
+		<div class="col-xs-2">
+		  <ul class="nav nav-pills nav-stacked" id="selectionTabs">
+		    <li class="active"><a data-toggle="pill" href="#standings">Standings</a></li>
+		    <li><a data-toggle="pill" href="#teams">Teams</a></li>
+		    <li><a data-toggle="pill" href="#country">Country</a></li>
+		    <li><a data-toggle="pill" href="#rivalries">Rivalries</a></li>
+		    <li><a data-toggle="pill" href="#stadiums">Stadiums</a></li>
+		  </ul>
+
+		</div>
+
+		<!--Heres the content panel! We use this to draw on-->
+		<div class="col-xs-10">
+			<div class="content" id="content">
+    		</div>
+		</div>
+	</div>
+
+
+	<script>
+
+		// //build the year tabs along the top
+		// console.log("num years used: "+numYears);
+		// for(var i = startYear; i < startYear + numYears; i++){
+		// 	// console.log("in loop to build "+i+" tab");
+		// 	var yearTabssss = d3.select("#yearTabs")
+		// 		.append("li")
+		// 		.append("a")
+		// 		.attr("data-toggle", "pill")
+		// 		.attr("href", i).text(i);
+		// }
+
+		// //tabs listener
+		// $(document).ready(function(){
+		//     $(".nav-tabs a").click(function(){
+		//         $(this).tab('show');
+		//     });
+		//     $('.nav-pills a').on('shown.bs.tab', function(event){
+	 //        selection = $(event.target).text();     // active pill
+	 //        reDrawVisualisations();
+		//     });
+		//     $('.nav-tabs a').on('shown.bs.tab', function(event){
+	 //        year = $(event.target).text();          // active tab
+	 //        reDrawVisualisations();
+		//     });
+		// });
+
+		// //listner for the pictures along the top
+		// function topButton(name){
+		// 	if (name !== 'home'){
+		// 		team = name;
+		// 		//shows and changes the tab to teams
+		// 		$('#selectionTabs a[href="#teams"]').tab('show');
+		// 		reDrawVisualisations();
+		// 	}
+		// 	else{
+		// 		//shows and changes the tab to ALL YEARS, Standings
+		// 		$('#selectionTabs a:first').tab('show');
+		// 		$('#yearTabs a:first').tab('show');
+		// 	}
+		// }
+	</script>
+
+
+</body>
+</html>
+
+
