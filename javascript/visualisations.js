@@ -35,6 +35,8 @@ function clearSvg(){
 
 //Takes us to the appropriate visualisation once a tab/pill etc. is clicked
 function reDrawVisualisations(){
+	var tempcnt = d3.selectAll("#team_icon");
+	console.log(tempcnt);
 	clearSvg();
 	switch (selection) {
 		case "Standings": standings(); break;

@@ -2,7 +2,6 @@
 function makeYearTabs(){
 	console.log("num years used: "+numYears);
 	for(var i = startYear; i < startYear + numYears; i++){
-		// console.log("in loop to build "+i+" tab");
 		var yearTabssss = d3.select("#yearTabs")
 			.append("li")
 			.append("a")
@@ -10,6 +9,7 @@ function makeYearTabs(){
 			.attr("href", "#"+i).text(i);
 	}
 
+	// Tab listeners
 	$(document).ready(function(){
 	  $(".nav-tabs a").click(function(){
 	      $(this).tab('show');
@@ -25,16 +25,16 @@ function makeYearTabs(){
 	  });
 	});
 }
-// //tabs listener
-//listner for the pictures along the top
+
+//listner for the team pictures along the top & Home button
 function topButton(name){
-	if (name !== 'home'){
+	if (name !== 'home'){ // team picture is clicked
 		team = name;
 		//shows and changes the tab to teams
 		$('#selectionTabs a[href="#teams"]').tab('show');
 		reDrawVisualisations();
 	}
-	else{
+	else{ // home button clicked
 		//shows and changes the tab to ALL YEARS, Standings
 		$('#selectionTabs a:first').tab('show');
 		$('#yearTabs a:first').tab('show');

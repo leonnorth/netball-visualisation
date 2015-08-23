@@ -9,11 +9,6 @@ function standings(){
 
 function standingsAllYears(){
 
-	//scale functions
-	var xScale = d3.scale.linear().domain([startYear,numYears+startYear-1]).range([0,chartWidth]),
-		yScale = d3.scale.linear().domain([0,9]).range([0,chartHeight]),
-		xDotScale = d3.scale.linear().domain([0,numYears-1]).range([0,chartWidth]);
-
 	//Headding
 	svgContainer.append("g").append("text")
 		.attr("class", "title")
@@ -23,6 +18,11 @@ function standingsAllYears(){
 		.text("Final Standings For All Years")
 
 	yBuffer = yBuffer + 30;
+
+	//scale functions
+	var xScale = d3.scale.linear().domain([startYear,numYears+startYear-1]).range([0,chartWidth]),
+		yScale = d3.scale.linear().domain([0,9]).range([0,chartHeight]),
+		xDotScale = d3.scale.linear().domain([0,numYears-1]).range([0,chartWidth]);
 
 	//First, get the data into the right form.
 	//In this case, an array of the form:
@@ -58,10 +58,11 @@ function standingsAllYears(){
 	pics.append("svg:image")
 		.attr("class", "svgimage")
 		.attr('width', 58)
-	  .attr('height', 58)
-	  .attr("x", xBuffer/2+1)
+	  	.attr('height', 58)
+	  	.attr("x", xBuffer/2+1)
 		.attr("y", function(d, i){return (yBuffer - 30) + yScale(d.positions[0].position)+1})
-	  .attr("xlink:href", function(d){return "resources/team_logos/"+d.team+".png";});
+		.attr("id", function(d){return "team_icon";})
+	  	.attr("xlink:href", function(d){return "resources/team_logos/"+d.team+".png";});
 
 	xBuffer = xBuffer + 45;
 
