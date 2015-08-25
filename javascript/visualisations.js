@@ -30,14 +30,17 @@ function makeContainer(){
 
 //function to clear out the svg
 function clearSvg(){
-	d3.select("#content").selectAll("g").remove();
+	//d3.select("#content").selectAll("g").remove();
+	// var stuff = d3.selectAll(function(d){console.log("hi"); console.log(this.id); return this.id.contans(team_icon); }).remove();
+	// console.log(stuff);
+	// var stuff = d3.selectAll("g").filter(function(d){return this.id.contains("team_icon")});
+	// console.log(stuff);
 }
 
 //Takes us to the appropriate visualisation once a tab/pill etc. is clicked
 function reDrawVisualisations(){
-	var tempcnt = d3.selectAll("#team_icon");
-	console.log(tempcnt);
-	clearSvg();
+	// console.log('testing contains: '+'blablabla'.contains('bla'))
+	//clearSvg();
 	switch (selection) {
 		case "Standings": standings(); break;
 		case "Teams": teams(); break;

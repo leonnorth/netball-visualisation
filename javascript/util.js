@@ -1,6 +1,6 @@
 		//build the year tabs along the top
 function makeYearTabs(){
-	console.log("num years used: "+numYears);
+	// console.log("num years used: "+numYears);
 	for(var i = startYear; i < startYear + numYears; i++){
 		var yearTabssss = d3.select("#yearTabs")
 			.append("li")
@@ -20,7 +20,7 @@ function makeYearTabs(){
 	  });
 	  $('.nav-tabs a').on('shown.bs.tab', function(event){
 	    year = $(event.target).text();          // active tab
-	    console.log(year);
+	    // console.log(year);
 	    reDrawVisualisations();
 	  });
 	});
@@ -40,3 +40,8 @@ function topButton(name){
 		$('#yearTabs a:first').tab('show');
 	}
 }
+
+// Add .contains function to String objects.
+// Probably bad practice to modify objects that I don't own, 
+// but this is a really usefull function!
+String.prototype.contains = function(it) { return this.indexOf(it) != -1; };

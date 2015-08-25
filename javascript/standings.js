@@ -9,6 +9,22 @@ function standings(){
 
 function standingsAllYears(){
 
+	var leftover_icons = clearPane();
+	function clearPane(){
+		d3.select("#content").selectAll("g").filter(function(d){return !this.id.contains("team_icon")}).remove();
+		d3.select("#content").selectAll("g").selectAll(".rect").remove();
+		d3.select("#content").selectAll("g").selectAll(".text").remove();
+		return d3.select("#content").selectAll("g");
+	}
+
+	//Clear everything except for the team logos in the content pane
+	// This deletes everything but the g element containing the pic and other things
+	// d3.select("#content").selectAll("g").filter(function(d){return !this.id.contains("team_icon")}).remove();
+	// d3.select("#content").selectAll("g").selectAll(".rect").remove();
+	// d3.select("#content").selectAll("g").selectAll(".text").remove();
+	// var leftover_icons = d3.select("#content").selectAll("g");
+	// console.log(leftover_icons);
+
 	//Headding
 	svgContainer.append("g").append("text")
 		.attr("class", "title")
@@ -42,13 +58,24 @@ function standingsAllYears(){
 		tempData.push(datum);
 	}
 
-		//pictures of the teams
+
+
+
+	// Pictures of the teams. If they exist, move them to the right place, 
+	// otherwise, make them.
+	if (leftover_icons[0].length > 1){
+		leftover_icons.selectAll(".svgimage").transition()
+			.attr("x", xBuffer/2+1)
+	}
+	else{
 	var pics = svgContainer.selectAll("pic")
 		.data(tempData).enter()
 		.append("g")
-		.attr("class", "pic");
+		.attr("class", "pic")
+		.attr("id", function(d){return "team_icon_"+d.team;});
 
 	pics.append("rect")
+		.attr("class", "rect")
 		.attr("width", 60)
 		.attr("height", 50)
 		.attr("x", xBuffer/2)
@@ -61,8 +88,11 @@ function standingsAllYears(){
 	  	.attr('height', 58)
 	  	.attr("x", xBuffer/2+1)
 		.attr("y", function(d, i){return (yBuffer - 30) + yScale(d.positions[0].position)+1})
-		.attr("id", function(d){return "team_icon";})
+		.attr("id", function(d){return "team_icon_"+d.team;})
 	  	.attr("xlink:href", function(d){return "resources/team_logos/"+d.team+".png";});
+	}
+	
+	
 
 	xBuffer = xBuffer + 45;
 
@@ -272,6 +302,24 @@ function standingsAllYears(){
 }
 
 function standingsByYear(){
+
+		// Clear everything except for the team logos in the content pane
+	// d3.select("#content").selectAll("g").filter(function(d){return !this.id.contains("team_icon")}).remove();
+	// var leftover_icons = d3.select("#content").selectAll("g");
+	// console.log(leftover_icons);
+	//Clear everything except for the team logos in the content pane
+	// This deletes everything but the g element containing the pic and other things
+	d3.select("#content").selectAll("g").filter(function(d){return !this.id.contains("team_icon")}).remove();
+	// This deletes everyting in the g element except for the pic
+	// var leftover_rects = d3.select("#content").selectAll(".rect").remove();
+	d3.select("#content").selectAll("g").selectAll(".rect").remove();
+	d3.select("#content").selectAll("g").selectAll(".text").remove();
+	// console.log("leftover_rects:");
+	// console.log(leftover_rects);
+	// leftover_rects.remove();
+
+	var leftover_icons = d3.select("#content").selectAll("g");
+
 	chartHeight = 480;
 	chartWidth = 550;
 
@@ -431,10 +479,17 @@ function standingsByYear(){
   	.text("Round: \n Score:");
 
   //draw team pics
+  if(leftover_icons[0]>1 | true){
+  	console.log("by year");
+  	leftover_icons.selectAll(".svgimage").transition()
+			.attr("x", xBuffer*2 + chartWidth +1);
+  }
+  	else{
   var pics = svgContainer.selectAll("pic")
 		.data(layers).enter()
 		.append("g")
 		.attr("class", "pic")
+		.attr("id", function(d){return "team_icon_"+d.team;})
 		.on("mouseover", function(d){
 			svgContainer.selectAll(".streamgraph, .pic")
 				.filter(function(x){ return x.key !== d.key;})
@@ -447,6 +502,7 @@ function standingsByYear(){
 		});
 
 	pics.append("rect")
+		.attr("class", "rect")
 		.attr("width", 180)
 		.attr("height", 50)
 		.attr("x", xBuffer*2 + chartWidth)
@@ -459,6 +515,7 @@ function standingsByYear(){
 	  .attr('height', 50)
 	  .attr("x", xBuffer*2 + chartWidth +1)
 		.attr("y", function(d, i){return (yBuffer/2)+yScale(9-i)+1})
+		.attr("id", function(d){return "team_icon_"+d.team;})
 	  .attr("xlink:href", function(d){return "resources/team_logos/"+d.key+".png";});
 
 	var picTxt = pics.append("text")
@@ -473,6 +530,7 @@ function standingsByYear(){
 			.attr("x", xBuffer*2 + chartWidth+65)
 			.attr("y", function(d, i){return 40+(yBuffer/2)+yScale(9-i)+1})
 			.text(function(d){return "Score: "+ d.values[d.values.length -1].value});
+	}
 
 	  	//Headding
 	svgContainer.append("g").append("text")
