@@ -45,3 +45,5 @@ function topButton(name){
 // Probably bad practice to modify objects that I don't own, 
 // but this is a really usefull function!
 String.prototype.contains = function(it) { return this.indexOf(it) != -1; };
+
+
