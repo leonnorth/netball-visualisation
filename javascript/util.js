@@ -38,6 +38,7 @@ function topButton(name){
 		//shows and changes the tab to ALL YEARS, Standings
 		$('#selectionTabs a:first').tab('show');
 		$('#yearTabs a:first').tab('show');
+		//
 	}
 }
 

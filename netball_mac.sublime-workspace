@@ -1,0 +1,703 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fram",
+				"frameRotation"
+			],
+			[
+				"fra",
+				"frameRotation"
+			],
+			[
+				"bone",
+				"boneNum"
+			],
+			[
+				"fin",
+				"findBone"
+			],
+			[
+				"line",
+				"lineStream"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"rot",
+				"rotation"
+			],
+			[
+				"gl",
+				"glRotatef"
+			],
+			[
+				"basis",
+				"basisRot"
+			],
+			[
+				"dot",
+				"dotProd"
+			],
+			[
+				"cro",
+				"crossProd"
+			],
+			[
+				"tra",
+				"translateBy"
+			],
+			[
+				"render",
+				"renderBone"
+			],
+			[
+				"comp3",
+				"COMP308_A1"
+			],
+			[
+				"g_rot",
+				"g_rotationY"
+			],
+			[
+				"g_rotation",
+				"g_rotationY"
+			],
+			[
+				"g_rotat",
+				"g_rotationX"
+			],
+			[
+				"g_win",
+				"g_winWidth"
+			],
+			[
+				"firs",
+				"firstPerson"
+			],
+			[
+				"fir",
+				"firstPersonMode"
+			],
+			[
+				"fi",
+				"firstPersonMode"
+			],
+			[
+				"wireF",
+				"wireframeMode"
+			],
+			[
+				"lo",
+				"g_lowestModelY"
+			],
+			[
+				"normali",
+				"normalizedFaceNormal"
+			],
+			[
+				"face",
+				"faceNormal"
+			],
+			[
+				"normal",
+				"normalize"
+			],
+			[
+				"norm",
+				"normalizedFaceNormal"
+			],
+			[
+				"g_ro",
+				"g_rotateObject"
+			],
+			[
+				"g_r",
+				"g_rotationX"
+			],
+			[
+				"createDisplayListWire",
+				"createDisplayListWireFloor"
+			],
+			[
+				"fae",
+				"faceNormal"
+			],
+			[
+				"obj",
+				"objLine"
+			],
+			[
+				"camera",
+				"g_cameraZoom"
+			],
+			[
+				"g_rota",
+				"g_rotationZ"
+			],
+			[
+				"g_",
+				"g_cameraZoom"
+			],
+			[
+				"norma",
+				"normalisedFaceNormal"
+			],
+			[
+				"pu",
+				"push_back"
+			],
+			[
+				"m_",
+				"m_face_count"
+			],
+			[
+				"vec",
+				"vec3"
+			],
+			[
+				"g_diff",
+				"g_diffX"
+			],
+			[
+				"diff",
+				"g_diffY"
+			],
+			[
+				"g_d",
+				"g_diffY"
+			],
+			[
+				"rota",
+				"rotationX"
+			],
+			[
+				"fac",
+				"faceNormal"
+			],
+			[
+				"nor",
+				"normalisedFaceNormal"
+			],
+			[
+				"c",
+				"cout"
+			],
+			[
+				"m",
+				"m_triangles"
+			],
+			[
+				"glVe",
+				"glVertex3fv"
+			],
+			[
+				"s",
+				"state"
+			],
+			[
+				"array",
+				"arrayA"
+			],
+			[
+				"rem",
+				"remainderXBuffer"
+			],
+			[
+				"arr",
+				"arrayHeight"
+			],
+			[
+				"remai",
+				"remainderYBuffer"
+			],
+			[
+				"arra",
+				"arrayWidth"
+			],
+			[
+				"re",
+				"reset"
+			],
+			[
+				"cell",
+				"cellY"
+			],
+			[
+				"max",
+				"maxShade"
+			],
+			[
+				"al",
+				"alive"
+			],
+			[
+				"mouse",
+				"mouseX"
+			],
+			[
+				"mous",
+				"mouseY"
+			],
+			[
+				"ali",
+				"aliveNeighbours"
+			],
+			[
+				"alive",
+				"aliveNeighbours"
+			],
+			[
+				"ro",
+				"row"
+			],
+			[
+				"row",
+				"rownum"
+			],
+			[
+				"dra",
+				"drawTick"
+			],
+			[
+				"aliv",
+				"alive"
+			],
+			[
+				"select",
+				"selectAll"
+			],
+			[
+				"d",
+				"data"
+			],
+			[
+				"svg",
+				"svgContainer"
+			],
+			[
+				"ar",
+				"arrayA"
+			],
+			[
+				"a",
+				"array"
+			],
+			[
+				"arary",
+				"arrayWidth"
+			],
+			[
+				"width",
+				"width"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Run with args",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"sublime.log_commands(True)",
+			"uuid.uuid4()",
+			"import uuid",
+			"import uuit",
+			"help",
+			"helo",
+			"--help",
+			"-help",
+			"ls",
+			"sublime.log_commands(False)",
+			"File -> Save All",
+			"sublime.log_commands(True)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/u/students/northleon/projects/COMP308/COMP308_A1/work/src/geometry.cpp",
+		"/u/students/northleon/projects/COMP308/COMP308_A1/work/src/main.cpp",
+		"/u/students/northleon/projects/COMP308/COMP308_A2/a2_skeleton/work/res/assets/taichi.amc",
+		"/u/students/northleon/Downloads/80_59.tvd",
+		"/u/students/northleon/Downloads/01.asf",
+		"/u/students/northleon/projects/COMP308/COMP308_A2/a2_skeleton/work/README.txt",
+		"/u/students/northleon/projects/COMP308/COMP308_A2/a2_skeleton/work/res/assets/test_bone_1.asf",
+		"/u/students/northleon/projects/COMP308/COMP308_A2/a2_skeleton/work/res/assets/priman.asf",
+		"/u/students/northleon/projects/COMP308/COMP308_A2/a2_skeleton/work/res/assets/test_bone_2.asf",
+		"/u/students/northleon/projects/COMP308/COMP308_A2/COMP308_A2.sublime-project",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-aguinarani/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-bellchar2/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-beckcame/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-battukara/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-barryholl/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-barrenjohn/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-barnetoliv/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-bannishayd/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-banksjame/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-bainbrhana/Reflection3.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-babeliam/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-arteminiko1/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-armstrdavi1/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-armstrcame/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-apperljosh/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-angelorhys/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-anastadani/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-amirienay/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-alqassmary/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-alomayamer/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-almozaali/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-allendani1/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-alexangeor/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-alcancal/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-ahkitmari/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-abouanasht/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-leejare/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-adamsoconn/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_3-abdustolli/Reflection.txt",
+		"/am/state-opera/home1/northleon/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/am/state-opera/home1/northleon/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/u/students/northleon/projects/COMP308/COMP308_A1/COMP308a1.sublime-project",
+		"/u/students/northleon/projects/COMP308/COMP308_A1/work/src/geometry.hpp",
+		"/u/students/northleon/projects/COMP308/COMP308_A1/work/src/comp308.hpp",
+		"/u/students/northleon/Downloads/COMP103-Assig3/MoleculeRenderer/molecule0.txt",
+		"/u/students/northleon/Downloads/COMP103-Assig3/MoleculeRenderer/atom-definitions.txt",
+		"/am/state-opera/home1/northleon/.cshrc",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-chinjani/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-cheynemari/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-chenggreg/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-chaumart/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-chauhabhav/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-changhaoc/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-chaneybret/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-chambedoug/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-caygilpaul/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-carrjona/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-carlinoliv/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-campberobe1/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-campbeemma1/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-butlerslad/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-burrjeth/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-burreldavi/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-bukholjess/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-buchansamu/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-brownhami1/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-brosnajess/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-brodiealex/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-brandonick/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-bradledani/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-bouchephil/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-bondkyal/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-bickforobe/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-bickforobe/marking/deuteronomy.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-berrymich1/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_2-berceadrag/Reflection.txt",
+		"/u/students/northleon/projects/COMP308/COMP308_A1/work/README.txt",
+		"/u/students/northleon/Downloads/COMP308_A1/work/README.txt",
+		"/u/students/northleon/projects/COMP308/COMP308_A1/work/res/assets/3d-female-pose-01.OBJ",
+		"/u/students/northleon/Downloads/GlutFPS/main.cpp",
+		"/u/students/northleon/Downloads/COMP308_A1/work/src/main.cpp",
+		"/am/state-opera/home1/northleon/.config/sublime-text-3/Packages/User/c++output.tmLanguage",
+		"/u/students/northleon/temp/random3.c++output.tmLanguage",
+		"/u/students/northleon/temp/random2.c++output.tmLanguage",
+		"/u/students/northleon/temp/random.c++output.tmLanguage",
+		"/u/students/northleon/projects/COMP308/COMP308_A1/COMP308a1.sublime-workspace",
+		"/am/state-opera/home1/northleon/.config/sublime-text-3/Packages/User/test.sublime-build",
+		"/am/state-opera/home1/northleon/.config/sublime-text-3/Packages/User/c++build.sublime-buildAddedText",
+		"/am/state-opera/home1/northleon/.config/sublime-text-3/Packages/User/c++build.sublime-build",
+		"/am/state-opera/home1/northleon/.config/sublime-text-3/Packages/User/c++postCMake.sublime-build",
+		"/am/state-opera/home1/northleon/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/u/students/northleon/projects/COMP308/COMP308_A1/work/src/threecgol.sublime-workspace",
+		"/u/students/northleon/projects/COMP308/COMP308_A1/work/src/threecgol.sublime-project",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-clarkebenj1/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-fredriloui/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-fraserjame/reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-fraserjame/marking/Main.ctxt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-fraserjame/marking/MyJavaFX.java",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-fraserhuon/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-fowlesdani/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-forbesjabe/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-forbesdani/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-forancono/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-faulknadam/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-falveyleon/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-evanspatr/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-escottkiri/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-elliotjona/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-elliotjona.zip",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-eamesjona/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-dunnjarv/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-doreyciar/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assig1/Game16/Game16.java",
+		"/u/students/northleon/Downloads/COMP103-Assig1/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-dobbiedavi/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-doakaida/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-dinhtu/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-dennisliam/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-delapabett/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-dawsonmatt/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-davialuke/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-davenpasht/COMP103-Assig1 Ashton Davenport/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-dalefielro/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-cuiyaoy/Reflection.txt",
+		"/u/students/northleon/Downloads/COMP103-Assignment_1-crosbycall/Reflection.txt",
+		"/u/students/northleon/Downloads/GlutFPS/Camera.cpp",
+		"/u/students/northleon/Downloads/GlutFPS/Camera.h",
+		"/am/state-opera/home1/northleon/projects/COMP308/COMP308_A1/work/README.txt"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"nextLi",
+			"lower",
+			"readASF",
+			"renderSkeleton",
+			"readASF",
+			"readAMC",
+			"nextLineTrimmed",
+			"readASF",
+			"argv",
+			"glutInit",
+			"dot",
+			"bone",
+			"*",
+			"renderBone",
+			"spa",
+			"top",
+			"comm",
+			"cout",
+			"setupCa",
+			"normali",
+			"spir",
+			"0.0f",
+			"g_rotateo",
+			"g_rot",
+			"mousemotionca",
+			"40.0f",
+			"cos",
+			"draw",
+			"m_displayListWire",
+			"rotate()",
+			"43586",
+			" 1 ",
+			"-1.677466",
+			"-1.074626",
+			"-1.074626 -1.735944 0.400406",
+			"-3.610250 3.703350 0.047702",
+			"run wi",
+			"g_mainWindow",
+			"vec3",
+			"color",
+			"vec3",
+			"glGenLi",
+			"displayListWire",
+			"glShadeModel",
+			"glutWireTeapot",
+			"geometry",
+			"displayList",
+			"glcall",
+			"wireFrame",
+			"createDisplayListPoly",
+			"wire",
+			"Geome",
+			"fluid",
+			"ArrayA =",
+			"neigh",
+			"\"tick\"",
+			"tick()",
+			"scrollingText",
+			"hoverabl",
+			"speed"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"size",
+			"",
+			"roof",
+			"size",
+			"size\n",
+			"	glVertex3f(m_points[v0.p].x, m_points[v0.p].y, m_points[v0.p].z);\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 422.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Run with args COMP308_A2",
+	"project": "netball_mac.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 180.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
