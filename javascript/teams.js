@@ -10,6 +10,15 @@ function teams(){
 
 function drawTeams(team, year, stats){
 
+  // Clear the svg to draw everything on.
+  // svgContainer.selectAll("g").filter().remove();
+      d3.select("#content").selectAll("g").filter(function(d){return !(this.id.contains("team_icon"))}).remove();
+    // Clear everything from the g element except for the picture
+    d3.select("#content").selectAll("g").selectAll(".rect").remove();
+    d3.select("#content").selectAll("g").selectAll(".text").remove();
+    d3.select("#content").selectAll("g").selectAll(".svgimage").transition().attr("x", -100).attr("y", -100);
+
+
   var margin = {top: 50, right: 50, bottom: 10, left: 50},
     width = 780 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;

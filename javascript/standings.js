@@ -8,7 +8,9 @@ function standings(){
 }
 
 function standingsAllYears(){
+	// Keep an equal time for all transitions
 	var transDuration = 800;
+
 	// Clear everything except for the team icons
 	function clearPane(){
 		// Clear everything except for the team logos in the content pane
@@ -73,7 +75,9 @@ function standingsAllYears(){
 	var lineVisualisation;
 	var count = 0;
 
+	// This function is called if this visualisation is being drawn but not for the first time
 	function drawLeftoverIcons(){
+		//Transition the icons to the correct place
 		leftover_icons.selectAll(".svgimage").transition().duration(transDuration)
 			.attr("x", 21)
 			.attr("y", function(d, i){return (40) + yScale(d.positions[0].position)+1})
@@ -82,10 +86,10 @@ function standingsAllYears(){
 				drawImgRects();
 				if (count === 9){
 					count = 0;
-					drawLineChart();
+					drawLineChart(); // Callback to draw the chart
 				}
 			});
-
+		// Draw coloured rectangles for the team logos
 		function drawImgRects(){
 			var imgRects = leftover_icons.insert("rect", "image")
 				.attr("class", "rect")
@@ -98,16 +102,20 @@ function standingsAllYears(){
 				.transition() // Transition the rectangles in.
 				.attr("opacity", 1.0);
 		}
-	}
 
+		toolTip = makeToolTip();
+	}
+	// This function is called if this visualisation is being drawn for the first time
 	function drawFreshIcons(){
+
+		// Make a container for the team logos
 		var pics = svgContainer.selectAll("pic")
 			.data(tempData).enter()
 			.append("g")
 			.attr("class", "pic")
 			.attr("id", function(d){return "team_icon_"+d.team;})
 
-
+		// Draw the boxes around the team logos
 		pics.append("rect")
 			.attr("class", "rect")
 			.attr("width", 60)
@@ -119,6 +127,7 @@ function standingsAllYears(){
 			.transition()
 			.attr("opacity", 1.0);
 
+		// Draw the team logos
 		pics.append("svg:image")
 			.attr("class", "svgimage")
 			.attr('width', 58)
@@ -131,6 +140,7 @@ function standingsAllYears(){
 			.transition()
 			.attr("opacity", 1.0);
 
+		// Call to draw the chart for the first time
 		drawLineChart();
 	}
 
@@ -160,6 +170,7 @@ function standingsAllYears(){
 	function drawLineChart(){
 		drawChartBackground();
 
+		// Clear off any lingering elements that may interfere
 		svgContainer.selectAll("line").remove();
 
 		//Drawing the line chart
@@ -175,7 +186,7 @@ function standingsAllYears(){
 			.attr("stroke", function(d){return teamCols[d.team];})
 			.attr("stroke-width", 3)
 			.attr("fill", "none")
-			.attr("stroke-dasharray", function(){
+			.attr("stroke-dasharray", function(){ // The rest of this is to animate the lines drawing accross the chart
 				var eachPath = d3.select(this);
 	    		var totalLength = eachPath.node().getTotalLength();
 				return totalLength + " " + totalLength;
@@ -210,10 +221,9 @@ function standingsAllYears(){
 			.attr("opacity", 0.0)
 
 		circles.transition()
-			//.delay(1800)
 			.attr("opacity", 1)
-			.each("end", function(d){			//After all animations have taken place, make things hoverable
-				addHover();
+			.each("end", function(d){
+				addHover(); //After all animations have taken place, make things hoverable
 			})
 	}
 
@@ -223,13 +233,13 @@ function standingsAllYears(){
 				var mouseX = d3.mouse(this)[0],
 				mouseY = d3.mouse(this)[1];
 
+				// Make tooltip visable and move to the mouse
+				toolTip.moveToFront();
 				toolTip.style("display", "block")
-
 				toolTip.select("rect")
 					.attr("x", mouseX)
 					.attr("y", mouseY-60)
 					.attr("fill", teamCols[d.team]);
-
 				toolTip.select(".svgimage")
 					.attr("x", mouseX+1)
 					.attr("y", mouseY-60+1)
@@ -326,6 +336,7 @@ function standingsAllYears(){
 
 	var toolTip = makeToolTip();
 
+
 	function drawAxis(){
 		//add x axis
 		svgContainer.insert("g", ".lineVisualisation")         
@@ -378,27 +389,33 @@ function standingsAllYears(){
 			.transition()
 			.attr("opacity", 1.0);
 	}
-
-
   	xBuffer = 40;
 	yBuffer = 40;
 }
+
+// Custom function to move a selection to the front
+d3.selection.prototype.moveToFront = function() {
+  return this.each(function(){
+    this.parentNode.appendChild(this);
+  });
+};
 
 var streamgraph_1;
 function standingsByYear(){
 	chartHeight = 480;
 	chartWidth = 550;
+
+	// Keep an equal time for all transitions
 	var transDuration = 800;
 
-	// If we are just swapping years then updateYear = true, false otherwise.
+	// If we are just swapping years then updateYear == true, false otherwise.
 	var updateYear = false;
 	var leftover = svgContainer.selectAll(".streamgraph");
 	updateYear =  (leftover[0].length > 0);
 
 	var leftover_icons;
 
-
-
+	// We will either draw a new graph or update the current one.
 	if (updateYear){
 		updateStreamgraph();
 	}
@@ -406,10 +423,11 @@ function standingsByYear(){
 		drawFirstStreamgraph();
 	}
 
+	// Update the current streamgraph to the new data
 	function updateStreamgraph(){
 
+		// Arrange the data
 		function standingsByYearData(){
-			//arrange the data
 			var tempData = [];
 			for(var i = 0; i < TEAMS.length; i++){
 				for(var j = 0; j < teamStats.get(parseInt(year)).get(TEAMS[i]).pointsAtRound.length; j++){
@@ -421,7 +439,6 @@ function standingsByYear(){
 			}
 			return tempData;		
 		}
-
 		var tempData = standingsByYearData();
 
 		//scales
@@ -465,6 +482,8 @@ function standingsByYear(){
 		// Update headding:
 		svgContainer.select(".title").text("Points By Round in "+year);
 	}
+
+	// Draw a fresh Streamgraph
 	function drawFirstStreamgraph(){
 		chartHeight = 480;
 		chartWidth = 550;
@@ -599,10 +618,8 @@ function standingsByYear(){
 
 		var graph = drawGraph();
 
-		//console.log(graph);
-
 		function updateArea(){
-		  	//Animate - update the area 1st, then animate.
+		  	// Animate - update the area 1st, then animate.
 		 	area = d3.svg.area()
 			    .interpolate("step-after")
 			    .x(function(d,i) { return 40 + x(d.date); })
@@ -610,10 +627,6 @@ function standingsByYear(){
 			    .y1(function(d) { return 50 + y(d.y0 + d.y); });
 		}
 	    updateArea();
-
-	 //    // Transition graph using the new area
-		// graph.transition().duration(10)
-		// 	.attr("d",function(d){return area(d.values);});
 
 		function drawAxis(){
 			//add x axis label
@@ -744,11 +757,8 @@ function standingsByYear(){
 		xBuffer = 40;
 		yBuffer = 40;
 		chartHeight = 480;
-		chartWidth = 650;
-		
+		chartWidth = 650;	
 	}
-
-
 }
 
 function findIndexByKeyValue(arraytosearch, key, valuetosearch) {

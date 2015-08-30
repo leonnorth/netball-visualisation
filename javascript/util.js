@@ -1,6 +1,5 @@
-		//build the year tabs along the top
+//build the year tabs along the top
 function makeYearTabs(){
-	// console.log("num years used: "+numYears);
 	for(var i = startYear; i < startYear + numYears; i++){
 		var yearTabssss = d3.select("#yearTabs")
 			.append("li")
@@ -20,7 +19,6 @@ function makeYearTabs(){
 	  });
 	  $('.nav-tabs a').on('shown.bs.tab', function(event){
 	    year = $(event.target).text();          // active tab
-	    // console.log(year);
 	    reDrawVisualisations();
 	  });
 	});
@@ -38,7 +36,7 @@ function topButton(name){
 		//shows and changes the tab to ALL YEARS, Standings
 		$('#selectionTabs a:first').tab('show');
 		$('#yearTabs a:first').tab('show');
-		//
+
 	}
 }
 
